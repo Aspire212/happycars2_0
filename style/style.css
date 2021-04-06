@@ -1,0 +1,578 @@
+@charset "UTF-8";
+
+/*Обнуление*/
+
+html {
+    scroll-behavior: smooth;
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    border: 0;
+}
+
+*,
+*:before,
+*:after {
+    box-sizing: border-box;
+}
+
+:focus,
+:active {
+    outline: none;
+}
+
+a:focus,
+a:active {
+    outline: none;
+}
+
+nav,
+footer,
+header,
+aside {
+    display: block;
+}
+
+html,
+body {
+    height: 100%;
+    width: 100%;
+    font-size: 100%;
+    line-height: 1;
+    font-size: 14px;
+    -ms-text-size-adjust: 100%;
+    -moz-text-size-adjust: 100%;
+    -webkit-text-size-adjust: 100%;
+}
+
+input,
+button,
+textarea {
+    font-family: inherit;
+}
+
+input::-ms-clear {
+    display: none;
+}
+
+button {
+    cursor: pointer;
+}
+
+button::-moz-focus-inner {
+    padding: 0;
+    border: 0;
+}
+
+a,
+a:visited {
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: none;
+}
+
+ul li {
+    list-style: none;
+}
+
+img {
+    vertical-align: top;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-size: inherit;
+    font-weight: 400;
+}
+
+
+/*preload modal*/
+
+.preload {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    width: 100%;
+    overflow: hidden;
+  }
+  .circle {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    margin: 7px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .circle:before {
+    content: "";
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    opacity: 0.7;
+    animation: scale 2s infinite cubic-bezier(0, 0, 0.49, 1.02);
+  }
+  .circle-1 {
+    background-color: #000;
+  }
+  .circle-1:before {
+    background-color: rgb(248, 7, 7);
+    animation-delay: 200ms;
+  }
+  .circle-2 {
+    background-color: #000;
+  }
+  .circle-2:before {
+    background-color:rgb(248, 7, 7);
+    animation-delay: 400ms;
+  }
+  .circle-3 {
+    background-color:#000;
+  }
+  .circle-3:before {
+    background-color:rgb(248, 7, 7);
+    animation-delay: 600ms;
+  }
+  .circle-4 {
+    background-color: #000;
+  }
+  .circle-4:before {
+    background-color:rgb(248, 7, 7);
+    animation-delay: 800ms;
+  }
+  .circle-5 {
+    background-color: #000;
+  }
+  .circle-5:before {
+    background-color:rgb(248, 7, 7);
+    animation-delay: 1000ms;
+  }
+  @keyframes scale {
+    0% {
+      transform: scale(1);
+    }
+    50%, 75% {
+      transform: scale(2.5);
+    }
+    78%, 100% {
+      opacity: 0;
+    }
+  }
+
+/*--------------------*/
+
+/*preload spa*/
+
+body{
+    overflow-y: hidden;
+}
+.preloadSPA{
+    background-color: #000;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    width: 100%;
+    overflow: hidden;
+    z-index: 100;
+  }
+
+/*--------------------*/
+
+.page {
+    max-width: 1920px;
+    font-size: 16px;
+    color: #ffffff;
+    height: 100%;
+    position: relative;
+}
+
+li,
+p,
+a,
+legend,
+input,
+textarea,
+button {
+    font-family: "Raleway", sans-serif;
+    font-size: 1.25em;
+    line-height: 1.375em;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+a {
+    font-family: "Raleway", sans-serif;
+}
+
+h2 {
+    font-size: 1.875em;
+    line-height: 2.25em;
+    text-align: center;
+    padding-bottom: 15px;
+    border-bottom: 1px solid #fff;
+}
+legend{
+    font-size: 1.5em;
+}
+h2::first-letter {
+    color: #ff0000;
+}
+
+.wrapper {
+    width: 100%;
+}
+
+.wrapper-header {
+    width: 100%;
+    min-height: 600px;
+}
+
+header {
+    position: relative;
+    max-width: 1170px;
+    margin: 0 auto;
+    min-height: 52px;
+    z-index: 10;
+    padding: 26px 0 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid #fff;
+}
+
+header .header-logo {
+    width: 90px;
+    height: 20px;
+    font-weight: 600;
+    font-style: normal;
+    font-size: 2em;
+    line-height: 0.875em;
+    color: #fff;
+}
+
+header .header-logo :first-letter {
+    color: #ff0000;
+}
+
+.header-nav li {
+    display: inline;
+    margin-left: 30px;
+}
+
+.header-nav li a {
+    font-weight: 500;
+    font-style: normal;
+    font-size: 1em;
+    line-height: 0.875em;
+    color: #fff;
+}
+
+.swiper-container {
+    width: 100%;
+    height: 600px;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.swiper-slide {
+    width: 100%;
+    height: 100%;
+}
+
+.slide2 {
+    background: url(../image/Cars/Crv.jpg) center/cover no-repeat;
+}
+
+.slide1 {
+    background: url(../image/Cars/Fx50.jpg) center/cover no-repeat;
+}
+
+.slide3 {
+    background: url(../image/Cars/Lc200.jpg) center/cover no-repeat;
+}
+
+.slide4 {
+    background: url(../image/Cars/Pathfinder.jpg) center/cover no-repeat;
+}
+
+
+.slide5 {
+    background: url(../image/Cars/Santa.jpg) center/cover no-repeat;
+}
+
+.slide6 {
+    background: url(../image/Cars/sportage.jpg) center/cover no-repeat;
+}
+
+.swiper-shadow {
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.65);
+}
+
+.container-center {
+    max-width: 1170px;
+    margin: 0 auto;
+}
+
+.position-home__title {
+    position: absolute;
+    top: 120px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 1;
+    text-align: center;
+    color: #fff;
+}
+
+.home-title {
+    font-style: normal;
+    font-weight: bold;
+    font-size: 4.5em;
+    line-height: 3em;
+}
+
+.home-title::first-letter {
+    color: #ff0000;
+}
+
+.home-subtitle {
+    font-style: normal;
+    font-weight: normal;
+    font-size: 2.5em;
+    line-height: 1.75em;
+    border: none;
+}
+
+.wrapper-gray {
+    width: 100%;
+    background: #2b3036;
+    color: #fff;
+}
+
+.container-padding {
+    padding: 30px 0;
+}
+
+.about-text {
+    padding-top: 30px;
+}
+
+.flex-container {
+    display: flex;
+    justify-content: space-around;
+    padding: 15px 0 30px;
+    width: 100%;
+}
+
+.flex-container ul {
+    max-width: 48%;
+    text-align: center;
+}
+
+.flex-container span {
+    font-size: 6em;
+    text-align: center;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    padding-bottom: 15px;
+    color: #ff0000;
+}
+
+.wrapper-black {
+    background: #262626;
+    min-width: 600px;
+    background-size: 100px 100px;
+    color: #fff;
+}
+
+.works-title {
+    color: #fff;
+}
+
+.lightwidget-widget {
+    padding: 30px 0;
+    color: #fff;
+    height: 500px;
+}
+
+.flex-container {
+    display: flex;
+    padding: 30px 0;
+}
+
+.lightbox-garage {
+    max-width: 50%;
+    height: 450px;
+}
+
+.garage-text {
+    max-width: 50%;
+}
+
+.garage-text p {
+    padding-bottom: 30px;
+}
+
+.lightbox-garage img {
+    height: 150px;
+    width: auto;
+    transition: transform 0.1s ease;
+    z-index: 0;
+}
+
+.lightbox-garage img:hover {
+    transform: scale(1.8);
+    box-shadow: 0 0 5px red;
+    z-index: 5;
+    transition: transform 0.8s ease;
+}
+
+
+/*form*/
+
+.wrapperForm {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 500px;
+}
+
+.modal {
+    width: 440px;
+    height: 400px;
+    background: rgb(0, 0, 0);
+    position: absolute;
+    top: -20px;
+    left: -20px;
+    border-radius: 3px;
+    opacity: 0.95;
+    transform: scale(0);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 30px;
+    transition: transform .2s linear;
+}
+
+.modalActive {
+    transform: scale(1);
+}
+
+legend {
+    text-align: center;
+    padding-bottom: 40px;
+}
+
+form {
+    width: 400px;
+    position: relative;
+}
+
+.row {
+    display: flex;
+    align-items: center;
+    height: 60px;
+    width: 100%;
+}
+
+.rowBtn {
+    display: flex;
+    justify-content: center;
+}
+
+textarea,
+input {
+    background: transparent;
+    color: white;
+    padding: 5px;
+    border: 0;
+    border-bottom: 2px solid white;
+    box-shadow: 0 0 15px 4px rgba(255, 255, 255, 0.06);
+    width: 100%
+}
+
+.allInput:placeholder {
+    color: #cacaca;
+}
+
+textarea:focus,
+textarea:active,
+textarea:hover,
+input:focus,
+input:active,
+input:hover,
+input {
+    outline: none;
+}
+
+#block {
+    width: 80px;
+    text-align: center;
+}
+
+.allInput {
+    transition: border-bottom 0.5s ease-in-out;
+    background-color: transparent;
+}
+
+.red {
+    border-bottom: solid 3px red;
+}
+
+.green {
+    border-bottom: solid green 3px;
+}
+
+#submit {
+    padding: 0;
+    border: none;
+    color: inherit;
+    background-color: transparent;
+    cursor: pointer;
+    color: #898686;
+    display: block;
+    text-align: center;
+    width: 100px;
+    margin: 40px auto;
+    border-bottom: 2px solid white;
+    transition: all 0.3s linear;
+}
+
+#submit:focus,
+#submit:active,
+#submit:hover {
+    outline: none;
+}
+
+#submit:active {
+    color: white;
+    width: 100px;
+}
+
+#submit:hover {
+    border-bottom: 3px solid green;
+    width: 110px;
+}
+
+/*rgba(0, 0, 0, 0.95) url(../image/depositphotos_104665578_stock_illustration_auto_spare_parts_seamless.svg) top left repeat;*/
