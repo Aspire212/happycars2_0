@@ -282,6 +282,18 @@ header .header-logo :first-letter {
     color: #fff;
 }
 
+
+.number:hover,
+.header-nav li a:hover{
+    text-shadow: 0 0 20px rgba(0, 255, 0, .8);
+}
+.header-nav li a:focus,
+.number:focus{
+    color: rgba(0, 255, 0, .8);
+}
+
+
+
 .swiper-container {
     width: 100%;
     height: 600px;
@@ -433,22 +445,10 @@ header .header-logo :first-letter {
     padding-bottom: 30px;
 }
 
-.lightbox-garage img {
-    height: 150px;
-    width: auto;
-    transition: transform 0.1s ease;
-    z-index: 0;
-}
-
-.lightbox-garage img:hover {
-    transform: scale(1.8);
-    box-shadow: 0 0 5px red;
-    z-index: 5;
-    transition: transform 0.8s ease;
-}
 .myService{
     width: 100%;
     height:  33%;
+    transition: transform .7s ease-in-out;
 }
 .one{
     background: url("../image/service/A.jpg") 100% / cover;
@@ -460,7 +460,9 @@ header .header-logo :first-letter {
 .three{
     background: url("../image/service/J.jpg") 100% / cover;
 }
-
+.myService:hover{
+    transform: scale(1.05);
+}
 /*form*/
 
 .wrapperForm {
@@ -623,6 +625,10 @@ input {
   padding: 30px;
   font-size: 1.8em;
 
+}
+
+.number a {
+    color: white;
 }
 footer{
   height: 100px;
