@@ -6,7 +6,7 @@
     const phone = form[3];
     const mess = form[4];
     const allInput = form.querySelectorAll('.allInput');
-    const regEmail = /^([A-Za-z0-9_\-\.])+\@([A-Za-z0-9_\-\.])+\.([A-Za-z]{2,4})$/;
+    const regEmail = "/^([A-Za-z0-9_\-\.])+\@([A-Za-z0-9_\-\.])+\.([A-Za-z]{2,4})$/";
     const regPhone = /\d{9}/;
 
     const modal = document.querySelector('.modal');
@@ -62,7 +62,7 @@
                     console.log('error');
                 }
             });
-            xhr.addEventListener('error', function(e) {
+            xhr.addEventListener('error', function() {
                 console.log('error')
             })
         } else {
