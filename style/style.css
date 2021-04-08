@@ -455,9 +455,11 @@ header .header-logo :first-letter {
     justify-content: center;
     align-items: center;
     width: 100%;
-    padding: 40px;
 }
-
+legend{
+  padding: 20px;
+  text-align: center;
+}
 .modal {
     width: 440px;
     height: 400px;
@@ -479,10 +481,7 @@ header .header-logo :first-letter {
     transform: scale(1);
 }
 
-legend {
-    text-align: center;
-    padding-bottom: 40px;
-}
+    
 
 form {
     width: 400px;
@@ -580,5 +579,40 @@ input {
 }
 
 
+
+
+
+
+.iconSoc {
+  display: flex;
+  justify-content: space-between;
+  width: 400px;
+  margin: 0 auto;
+}
+
+.iconSoc div{
+  width: 70px;
+  height: 70px;
+}
+
+.iconSoc img{
+  width: 100%;
+  height: 100%;
+}
+.mapTitle,
+.formTitle,
+.number{
+  text-align: center;
+  padding: 40px;
+  font-size: 1.8em;
+
+}
+footer{
+  height: 100px;
+}
+#endTitle{
+  border: none;
+  font-size: 2.5em;
+}
 
 /*rgba(0, 0, 0, 0.95) url(../image/depositphotos_104665578_stock_illustration_auto_spare_parts_seamless.svg) top left repeat;*/

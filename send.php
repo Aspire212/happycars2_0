@@ -1,3 +1,4 @@
+    font-size: 1.25em;
 <?php
 
 $dataJSON = file_get_contents('php://input');
