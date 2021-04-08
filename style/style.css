@@ -39,7 +39,6 @@ html,
 body {
     height: 100%;
     width: 100%;
-    font-size: 100%;
     line-height: 1;
     font-size: 14px;
     -ms-text-size-adjust: 100%;
@@ -183,8 +182,6 @@ body{
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 100vh;
-    width: 100%;
     overflow: hidden;
     z-index: 100;
   }
@@ -258,6 +255,7 @@ header {
 }
 
 header .header-logo {
+    padding-bottom: 30px;
     width: 90px;
     height: 20px;
     font-weight: 600;
@@ -486,6 +484,7 @@ legend{
 form {
     width: 400px;
     position: relative;
+    margin-bottom: 30px;
 }
 
 .row {
@@ -495,11 +494,13 @@ form {
     width: 100%;
 }
 .rowArea {
-  height: 120px;
+  height: 200px;
   margin-bottom: 40px;
 }
+textarea{
+    height: 100%;
+}
 .rowBtn {
-    padding: 80px;
     display: flex;
     justify-content: center;
 }
@@ -515,7 +516,7 @@ input {
     width: 100%
 }
 
-.allInput:placeholder {
+.allInput::placeholder {
     color: #cacaca;
 }
 
@@ -548,16 +549,13 @@ input {
 }
 
 #submit {
-    padding: 0;
     border: none;
-    color: inherit;
     background-color: transparent;
     cursor: pointer;
     color: #898686;
     display: block;
     text-align: center;
     width: 100px;
-    margin: 40px auto;
     border-bottom: 2px solid white;
     transition: all 0.3s linear;
 }
@@ -599,11 +597,14 @@ input {
   width: 100%;
   height: 100%;
 }
-.mapTitle,
+.mapTitle{
+    text-align: center;
+    font-size: 1.8em;
+}
 .formTitle,
 .number{
   text-align: center;
-  padding: 40px;
+  padding: 30px;
   font-size: 1.8em;
 
 }
@@ -614,5 +615,3 @@ footer{
   border: none;
   font-size: 2.5em;
 }
-
-/*rgba(0, 0, 0, 0.95) url(../image/depositphotos_104665578_stock_illustration_auto_spare_parts_seamless.svg) top left repeat;*/
