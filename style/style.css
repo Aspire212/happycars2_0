@@ -668,18 +668,80 @@
             }
             
             @media screen and (max-width: 780px) {
+                html {
+                    overflow: hidden;
+                }
                 .header-nav {
                     position: absolute;
                     justify-content: center;
                     top: 100px;
-                    right: -200px;
+                    right: 20px;
                     transition: all 0.5s linear;
+                    opacity: 0;
+                    visibility: hidden;
+                    overflow: hidden;
                 }
                 .header-nav-active {
-                    right: 20px;
+                    opacity: 1;
+                    visibility: visible;
+                    overflow: visible;
                 }
                 .header-nav li {
                     display: block;
                     margin-left: 30px;
+                    height: 50px;
+                }
+                .btnWrtapper {
+                    width: 40px;
+                    height: 40px;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                }
+                .burger-btn {
+                    display: block;
+                    background-color: white;
+                    width: 25px;
+                    height: 2px;
+                    position: relative;
+                    transition: all .3s ease-in-out;
+                }
+                .burger-btn::before {
+                    content: "";
+                    position: absolute;
+                    background-color: white;
+                    top: 5px;
+                    width: 25px;
+                    height: 2px;
+                    transform-origin: center center;
+                }
+                .burger-btn::after {
+                    content: "";
+                    position: absolute;
+                    background-color: white;
+                    bottom: 5px;
+                    width: 25px;
+                    height: 2px;
+                    transform-origin: center center;
+                }
+                .burger-btn-active {
+                    background: transparent;
+                }
+                .burger-btn-active::after {
+                    bottom: 0;
+                    transform: rotateZ(45deg);
+                }
+                .burger-btn-active::before {
+                    top: 0;
+                    transform: rotateZ(-45deg);
+                }
+                .burger-btn:active,
+                .burger-btn::before:active,
+                .burger-btn::after:active {
+                    background: red;
+                }
+                .swiper-button-prev,
+                .swiper-button-next {
+                    display: none;
                 }
             }
